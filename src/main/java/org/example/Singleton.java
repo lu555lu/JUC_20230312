@@ -9,7 +9,7 @@ public class Singleton {
     public static Singleton getInstance() {
         if (INSTANCE == null) {
             synchronized (Singleton.class) {
-                //问题3：为什么还要在这里加为空判断，之前不是判断过了吗
+                //问题3：为什么还要在这里加为空判断，之前不是判断过了吗? --->多线程第一次进入
                 if (INSTANCE == null) {
                     INSTANCE = new Singleton();
                 }
